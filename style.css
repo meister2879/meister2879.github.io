@@ -1,0 +1,142 @@
+/* Existing styles above */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(66, 65, 65);
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Existing styles above */
+
+/* Adjusted styles for the navbar */
+.navbar {
+  background-color: rgb(61, 59, 59);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 20px; /* Add margin to create distance from the photo section */
+}
+
+.logo {
+  margin-bottom: 1rem;
+  margin-left: 10%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-right: 10%;
+}
+
+.text a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.text a:hover {
+  background-color: rgb(104, 104, 104);
+  color: white;
+}
+
+.text a::after {
+  content: attr(data-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.text a:hover::after {
+  opacity: 1;
+}
+
+/* Media query for tablet and larger screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .text {
+    flex-direction: row;
+  }
+
+  .text a {
+    margin: 0;
+    width: auto;
+  }
+}
+
+/* Existing styles above */
+
+/* New styles for smaller photos */
+.photo img {
+  max-width: 100%; /* Maintain the original aspect ratio */
+  height: auto; /* Ensure the image doesn't exceed its container height */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Existing styles above */
+
+/* New styles for the hero section */
+.hero-section {
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow for better appearance */
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px; /* Set a maximum width for the hero image */
+  max-height: 400px; /* Adjust max-height for a visually pleasing size */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.arrow-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25%; /* Adjust padding to bring the buttons closer */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.arrow-button {
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.arrow-button:hover {
+  color: #ccc;
+}
+
+/* Existing styles below */
